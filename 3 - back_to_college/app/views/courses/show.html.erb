@@ -1,0 +1,8 @@
+<p>Edit Course. | <%= link_to('Edit', edit_course_path) %></p>
+<p>Delete Course. | <%= link_to('delete', @course, :method => :delete) %></p>
+
+<h1><%= @course.name %></h1>
+
+<% @course.students.each do |student| %>
+  <h5><%= student.name %></h5>
+<% end %>
